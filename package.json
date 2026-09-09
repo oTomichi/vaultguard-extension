@@ -27,10 +27,22 @@
     "@vaultguard/shared": "./src/types/shared.ts"
   },
   "manifest": {
-    "host_permissions": ["<all_urls>"],
-    "permissions": ["activeTab", "storage", "scripting"],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "permissions": [
+      "activeTab",
+      "storage",
+      "scripting"
+    ],
     "content_security_policy": {
       "extension_pages": "script-src 'self'; object-src 'self'"
     }
+  },
+  "overrides": {
+    "@parcel/watcher": "^2.5.1"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
