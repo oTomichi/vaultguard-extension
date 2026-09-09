@@ -1,0 +1,36 @@
+{
+  "name": "vaultguard-extension",
+  "displayName": "VaultGuard — Crypto Transaction Shield",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Real-time protection against phishing, malicious smart contracts, and transaction scams.",
+  "license": "MIT",
+  "repository": "github:otomichi/vaultguard-extension",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build && node scripts/copy-main-world.cjs",
+    "type-check": "tsc --noEmit",
+    "package": "plasmo package"
+  },
+  "dependencies": {
+    "plasmo": "^0.88.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.268",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.4.5"
+  },
+  "alias": {
+    "@vaultguard/shared": "./src/types/shared.ts"
+  },
+  "manifest": {
+    "host_permissions": ["<all_urls>"],
+    "permissions": ["activeTab", "storage", "scripting"],
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+  }
+}
