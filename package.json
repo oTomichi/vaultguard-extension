@@ -3,7 +3,7 @@
   "displayName": "VaultGuard — Crypto Transaction Shield",
   "version": "0.2.0",
   "private": true,
-  "description": "Real-time protection against phishing, malicious smart contracts, and transaction scams.",
+  "description": "Simulates transactions before you sign and scores risk 0-100 in plain English. Catches drainers, phishing, and unlimited approvals.",
   "license": "MIT",
   "repository": "github:otomichi/vaultguard-extension",
   "scripts": {
